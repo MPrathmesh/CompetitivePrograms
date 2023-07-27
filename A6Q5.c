@@ -1,0 +1,34 @@
+//5.Write a program which accept number from user and count frequency of 6 in it.
+#include<stdio.h>
+
+int CountSix(int iNo)
+{
+	int iCnt = 0;
+	int iFrequency = 0;
+	int iDigit = 0;
+
+	while(iNo > 0)
+	{
+		iDigit = iNo % 10;
+		if(iDigit == 6)
+		{
+			iFrequency++;
+		}
+		iNo = iNo / 10;
+	}
+	return iFrequency;
+}
+
+int main()
+{
+	int iValue = 0;
+	int iRet = 0;
+
+	printf("Enter number\n");
+	scanf("%d",&iValue);
+
+	iRet = CountSix(iValue);
+	printf("%d\n",iRet);
+
+	return 0;
+}
